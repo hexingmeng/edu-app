@@ -1,17 +1,131 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#345DC2",
+				"app-plus": {
+					"titleNView": {
+						"type" : "transparent",
+						"searchInput": {
+							"placeholder": "搜索你想要的内容",
+							"disabled": true,
+							"backgroundColor": "#F0F1F2",
+							"borderRadius": "30rpx",
+							"align": "center",
+							"placeholderColor": "#979C9D"
+						}
+						// #ifdef APP-PLUS
+						,
+						"buttons": [
+							{
+								"float": "right",
+								"fontSize": "27",
+								"background": "rgba(0,0,0,0)",
+								"fontSrc": "/static/icon/iconfont.ttf",
+								"text": "\ue689"
+							}
+						]
+						// #endif
+					}
+				}
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/category/category",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        }
+        ,{
+            "path" : "pages/article/article",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/question/question",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
+		// 状态栏与导航栏背景色
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		// 状态栏与导航栏字体颜色，仅支持 black/white(默认)
+		"navigationBarBackgroundColor": "#FFFFFF",
+		// 上拉下拉回弹背景色（ios和真机微小程序）
+		"backgroundColor": "#F8F9FB"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		// 未选中字体颜色
+		"color": "#b0abb3",
+		 // 选中字体颜色
+		"selectedColor": "#345dc2",
+		 // 边框色
+		"borderStyle": "white",
+		 // 背景色
+		"backgroundColor": "#f8f8f8",
+		 // 标签栏高度
+		"height": "52px",
+		 //字体大小
+		"fontSize": "11px",
+		// tabbar配置项
+		"list": [
+			{
+				// 首页tabbar对应的页面路径
+				"pagePath": "pages/index/index",
+				// tabbar文字
+				"text": "首页",
+				// tabbar默认展示的图标
+				"iconPath": "static/tab/index.png",
+				// tabbar选中展示的图标
+				"selectedIconPath": "static/tab/index-active.png"
+			},
+			{
+				"pagePath": "pages/category/category",
+				"text": "分类",
+				"iconPath": "static/tab/category.png",
+				"selectedIconPath": "static/tab/category-active.png"
+			},
+			{
+				"pagePath": "pages/article/article",
+				"text": "阅读",
+				"iconPath": "static/tab/article.png",
+				"selectedIconPath": "static/tab/article-active.png"
+			},
+			{
+				"pagePath": "pages/question/question",
+				"text": "问答",
+				"iconPath": "static/tab/question.png",
+				"selectedIconPath": "static/tab/question-active.png"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的",
+				"iconPath": "static/tab/my.png",
+				"selectedIconPath": "static/tab/my-active.png"
+			}
+		]
+	}
 }
