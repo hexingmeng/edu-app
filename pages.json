@@ -1,11 +1,11 @@
 {
-	"pages": [
-		{
+	"pages": [{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTextStyle": "white",
 				"navigationBarBackgroundColor": "#345DC2",
 				"app-plus": {
+					"bounce" : "none",
 					"titleNView": {
 						"type" : "transparent",
 						"searchInput": {
@@ -36,8 +36,22 @@
             "path" : "pages/category/category",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "navigationBarTitleText": "分类",
+                "navigationBarBackgroundColor": "#345DC2",
+				"navigationBarTextStyle":"white",
+				"app-plus": {
+					"titleNView": {
+						"buttons": [
+							{
+								"float": "right",
+								"fontSize": "18",
+								"background": "rgba(0,0,0,0)",
+								"fontSrc": "/static/icon/iconfont.ttf",
+								"text": "\ue608"
+							}
+						]
+					}
+				}
             }
         }
         ,{
@@ -67,39 +81,35 @@
             }
             
         }
+        ,{
+            "path" : "pages/public/web-view",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
     ],
 	"globalStyle": {
-		// 状态栏与导航栏背景色
 		"navigationBarTextStyle": "black",
-		// 状态栏与导航栏字体颜色，仅支持 black/white(默认)
 		"navigationBarBackgroundColor": "#FFFFFF",
-		// 上拉下拉回弹背景色（ios和真机微小程序）
-		"backgroundColor": "#F8F9FB"
+		"backgroundColor": "#F8F9FB",
+		"backgroundColorTop":"#FFFFFF"
 	},
 	"uniIdRouter": {},
 	"tabBar": {
-		// 未选中字体颜色
 		"color": "#b0abb3",
-		 // 选中字体颜色
 		"selectedColor": "#345dc2",
-		 // 边框色
 		"borderStyle": "white",
-		 // 背景色
 		"backgroundColor": "#f8f8f8",
-		 // 标签栏高度
 		"height": "52px",
-		 //字体大小
 		"fontSize": "11px",
-		// tabbar配置项
 		"list": [
 			{
-				// 首页tabbar对应的页面路径
 				"pagePath": "pages/index/index",
-				// tabbar文字
 				"text": "首页",
-				// tabbar默认展示的图标
 				"iconPath": "static/tab/index.png",
-				// tabbar选中展示的图标
 				"selectedIconPath": "static/tab/index-active.png"
 			},
 			{
